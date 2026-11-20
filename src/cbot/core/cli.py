@@ -8,8 +8,9 @@ class CliInstance:
 
 
     def run(self) -> None:
-        print("How can I help you?")
+        self.bot.introduce()
 
         while True:
-            prompt: str = sinput("> ")
+            prompt: str = sinput("\033[90m> \033[32m")
+            print("\033[0m", end="")
             self.bot.reply(prompt)
