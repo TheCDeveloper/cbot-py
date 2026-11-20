@@ -49,12 +49,15 @@ class TimeQuery(QueryType):
 
         current_day = lambda: f"The current day is {TimeQuery.__get_weekday()}."
 
+        answers["what is day"] = current_day
         answers["what day is it"] = current_day
+        answers["what day is today"] = current_day
         answers["which day is it"] = current_day
         answers["which day is today"] = current_day
-        answers["what is day"] = current_day
         answers["what week day is it"] = current_day
         answers["what week day is today"] = current_day
         answers["which week day is it"] = current_day
         answers["which week day is today"] = current_day
         answers["what is week day"] = current_day
+        answers["what is week day today"] = current_day
+        answers["what is week day of today"] = current_day

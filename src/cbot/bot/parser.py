@@ -1,5 +1,6 @@
 import re
 
+
 def parse(prompt: str) -> map[str]:
     # Regex removes punchuations
     return map(lambda e: re.sub("[^a-zA-Z0-9]*", "", e), prompt.lower().strip().split())
@@ -32,8 +33,8 @@ __abbreviations = {
 def expand_abbreviations(words: list[str]):
     for i, word in enumerate(words):
         if word in __abbreviations:
-            new = __abbreviations[word].split()
-            words[i] = new[0]
+            full_form = __abbreviations[word].split()
+            words[i] = full_form[0]
 
-            for n in new[-1:0:-1]:
-                words.insert(i + 1, n)
+            for other_word in full_form[-1:0:-1]: # Reversed of [1:]
+                words.insert(i + 1, other_word)
