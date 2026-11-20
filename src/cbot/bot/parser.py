@@ -18,15 +18,20 @@ def filter_filler_words(words: list[str]):
 
 # TODO: Add common abbreviations, must be non ambigious in the language
 __abbreviations = {
+    # Short forms
     "u": "you",
     "r": "are",
     "idk": "i do not know",
     "ye": "yes",
 
+    # Expansions
     "dont": "do not",
     "cant": "can not",
     "thats": "that is",
     "weekday": "week day",
+
+    # Accent differences
+    "colour": "color"
 }
 
 
